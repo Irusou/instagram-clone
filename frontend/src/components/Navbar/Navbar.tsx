@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { LinkList } from "./../LinkList/LinkList";
+import { LinkList } from "./LinkList/LinkList";
 import { Link } from "./Link/Link";
 
 export const Navbar = () => {
