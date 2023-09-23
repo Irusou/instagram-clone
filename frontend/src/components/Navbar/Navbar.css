@@ -6,18 +6,24 @@
 }
 
 .navbar {
-	width: 20%;
+	width: 245px;
 	height: 100vh;
 
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	background-color: black;
 
-	padding: var(--nav-padding);
+	padding: 8px 12px 20px 12px;
 
-	/* will be grid */
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 10% 80% 10%;
 
+	align-items: start;
 	justify-content: center;
+	align-content: center;
+	justify-items: start;
+
+	/* position: fixed; */
 }
 
 .title-link {

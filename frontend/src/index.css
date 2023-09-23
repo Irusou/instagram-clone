@@ -5,6 +5,10 @@
 	color: white;
 
 	background-color: black;
+
+	--navbar-size: 20%;
+	--main-size: 60%;
+	--aside-size: 20%;
 }
 
 * {

@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import { LinkList } from "./../LinkList/LinkList";
 import { Link } from "./Link/Link";
 
 export const Navbar = () => {
@@ -10,15 +11,8 @@ export const Navbar = () => {
 				<a href="/" className="title-link">
 					{title}
 				</a>
-				<Link children="Página inicial" icon="home" />
-				<Link children="Pesquisa" icon="search" />
-				<Link children="Explorar" icon="explore" />
-				<Link children="Reels" icon="movie" />
-				<Link children="Mensagens" icon="send" />
-				<Link children="Notificações" icon="favorite" />
-				<Link children="Criar" icon="add_box" />
-				<Link children="Perfil" icon="" />
-				<Link children="Mais" icon="menu" />
+				<LinkList />
+				<Link children="Mais" icon="menu" isIcon={false} />
 			</nav>
 		</>
 	);
