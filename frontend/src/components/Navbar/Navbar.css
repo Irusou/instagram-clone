@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+	--nav-padding: 15px;
+	--icon-padding: 8px;
+}
+
+.navbar {
+	width: 20%;
+	height: 100vh;
+
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+	padding: var(--nav-padding);
+
+	/* will be grid */
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+}
+
+.title-link {
+	margin: 30px calc(var(--nav-padding) - var(--icon-padding));
+
+	text-decoration: none;
+	color: white;
+
+	font-family: "Lobster", cursive;
+	font-size: 1.5rem;
+}
