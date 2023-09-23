@@ -1,0 +1,18 @@
+.main-nav {
+	margin: 20px 10px;
+	width: 80%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+	display: flex;
+	align-self: flex-start;
+	gap: 10px;
+
+	& button {
+		background: none;
+		border: none;
+		color: rgb(201, 201, 201);
+		font-size: 1rem;
+		font-family: "Poppins";
+		font-weight: 400;
+	}
+}
