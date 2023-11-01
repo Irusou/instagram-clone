@@ -1,11 +1,11 @@
 import "./Follower.css";
 
-interface Props {
-	children: string;
+interface Follower {
+	name: string;
 	url: string;
 }
 
-function Follower({ children, url }: Props) {
+function Follower({ name, url }: Follower) {
 	return (
 		<>
 			<div className="follower">
@@ -14,7 +14,7 @@ function Follower({ children, url }: Props) {
 						<img src={url} />
 					</span>
 				</span>
-				<p> {children} </p>
+				<p> {name} </p>
 			</div>
 		</>
 	);
