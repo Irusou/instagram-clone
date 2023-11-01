@@ -9,19 +9,19 @@ function Main() {
 	const followers: Follower[] = [
 		{
 			name: "Irus0u",
-			url: "/public/eu.jpg",
+			url: "/public/images/eu.jpg",
 		},
 		{
 			name: "Garou",
-			url: "/public/garou.jpg",
+			url: "/public/images/garou.jpg",
 		},
 		{
 			name: "Sung",
-			url: "/public/unkklnown.png",
+			url: "/public/images/unkklnown.png",
 		},
 		{
 			name: "I_uwuzumi",
-			url: "/public/izumi.jpg",
+			url: "/public/images/izumi.jpg",
 		},
 	];
 
