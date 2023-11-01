@@ -1,31 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Main.css";
-import MainNav from "./MainNav/MainNav";
-import FollowersCarousel from "./FollowersCarousel/FollowersCarousel";
 import Follower from "../Follower/Follower";
+import MainNav from "./MainNav/MainNav";
+
+interface Follower {
+	name: string;
+	url: string;
+}
+
+const demoFollowers: Follower[] = [
+	{ name: "teste", url: "some-url" },
+	{ name: "teste2", url: "some-url2" },
+];
 
 function Main() {
 	const [forYou, setForYou] = useState(true);
-	const followers: Follower[] = [
-		{
-			name: "Irus0u",
-			url: "/public/eu.jpg",
-		},
-		{
-			name: "Garou",
-			url: "/public/garou.jpg",
-		},
-		{
-			name: "Sung",
-			url: "/public/unkklnown.png",
-		},
-		{
-			name: "I_uwuzumi",
-			url: "/public/izumi.jpg",
-		},
-	];
+	const [followers, setFollowers] = useState<Follower[]>(demoFollowers);
+	const [posts, setPosts] = useState([]);
 
-	const posts: any[] = [];
+	// useEffect(() => {
+	// 	// fetch from db
+	// 	setFollowers([]);
+	// }, [forYou]);
+
+	// useEffect(() => {
+	// 	// fetch from db
+	// 	setPosts([]);
+	// }, [forYou]);
 
 	const handleForYou = () => {
 		setForYou(true);
@@ -44,9 +45,19 @@ function Main() {
 					handleForYou={handleForYou}
 					handleFollowing={handleFollowing}
 				/>
-				<FollowersCarousel followers={followers} />
+				<div className="followers-carousel">
+					{followers &&
+						followers.map((follower) => (
+							<Follower url={follower.url} children={follower.name} />
+						))}
+				</div>
 				<div className="posts-container">
-					{posts && posts.map((post) => <span key={post}></span>)}
+					{
+						posts &&
+							posts.map((post) => (
+								<span key={post}></span>
+							)) /* <- transform into post component */
+					}
 				</div>
 			</main>
 		</>

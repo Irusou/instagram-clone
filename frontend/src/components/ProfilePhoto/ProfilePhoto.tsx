@@ -1,10 +1,14 @@
 import "./ProfilePhoto.css";
-import logo from "C:/Users/JoaoPedro/Desktop/dev/instagram-clone/frontend/public/eu.jpg";
 
 export const ProfilePhoto = () => {
+	const url = "/frontend/public/eu.jpg";
+
 	return (
 		<>
-			<img src={logo} alt="logo" />
+			{/* 
+        TODO: solve image not loading error
+      */}
+			<img src={url} />
 		</>
 	);
 };
